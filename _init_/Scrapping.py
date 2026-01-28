@@ -2,7 +2,7 @@ from .byPass import WeBDataExractor
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from concurrent.futures import ThreadPoolExecutor
-from selenium.common.exceptions import WebDriverException, TimeoutException
+from selenium.common.exceptions import WebDriverException
 import re
 import time 
 import pandas as pd 

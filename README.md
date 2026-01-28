@@ -52,10 +52,4 @@ Q4 : Assumptions and Limitations:
 
 
 
-CAPTCHA ACCURACY
-
-NON HEADLESS : 80%
-
-HEADLESS : 96%
-
 # Data-Scraping-Engineer-Trial-Test

@@ -1,9 +1,7 @@
 import os
-
 BASE_DIR = os.getcwd()
 BIN_PATH = os.path.join(BASE_DIR, "_ai_utils", "bin")
 os.environ["PATH"] += os.pathsep + BIN_PATH
-
 import requests
 import speech_recognition as sr
 import time
@@ -17,6 +15,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
+import shutil
+
 
 class WeBDataExractor:
     def __init__(self, url, query):
@@ -39,7 +39,7 @@ class WeBDataExractor:
             self.download_path = os.path.abspath(r"_init_\captcha_downloads")
             if not os.path.exists(self.download_path):
                 os.makedirs(self.download_path)
-            self.options.add_argument("--headless=new")
+            # self.options.add_argument("--headless=new")
             self.options.add_argument("--window-size=1920,1080")
             self.options.add_argument("--disable-blink-features=AutomationControlled")
             self.options.add_experimental_option("excludeSwitches", ["enable-automation"])
@@ -137,9 +137,16 @@ class WeBDataExractor:
             self._log_error(f"System error during processing: {e}")
             raise e
         finally:
-            if os.path.exists(path_to_mp3): os.remove(path_to_mp3)
-            if os.path.exists(path_to_wav): os.remove(path_to_wav)
-
+            try:
+                if os.path.exists(self.download_path):
+                    # Deletes the folder and everything inside it
+                    shutil.rmtree(self.download_path)
+                    
+                    # Recreate the empty folder immediately for the next run
+                    os.makedirs(self.download_path)
+                    print("Captcha folder cleared.")
+            except Exception as e:
+                print(f"Error cleaning up: {e}")
     def _submit_solution(self, text):
         try:
             self.driver.switch_to.default_content()

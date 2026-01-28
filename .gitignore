@@ -3,6 +3,7 @@
 _init_/__pycache__/
 _ai_utils/*
 Error_logs.txt
+scraper_log.log
 
 
 # Ignore everything in this folder

@@ -1,0 +1,5 @@
+_init_/captcha_downloads/*
+.venv/
+_init_/__pycache__/
+_ai_utils/*
+Error_logs.txt

@@ -1,0 +1,6 @@
+requests
+SpeechRecognition
+pydub
+selenium
+webdriver-manager
+pandas

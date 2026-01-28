@@ -1,5 +1,14 @@
-_init_/captcha_downloads/*
+
 .venv/
 _init_/__pycache__/
 _ai_utils/*
 Error_logs.txt
+
+
+# Ignore everything in this folder
+_init_/captcha_downloads/*
+_ai_utils/*
+
+# But do NOT ignore the .gitkeep file
+!_init_/captcha_downloads/.gitkeep
+!_ai_utils/*.gitkeep

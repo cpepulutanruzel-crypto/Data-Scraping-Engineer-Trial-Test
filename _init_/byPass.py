@@ -39,7 +39,7 @@ class WeBDataExractor:
             self.download_path = os.path.abspath(r"_init_\captcha_downloads")
             if not os.path.exists(self.download_path):
                 os.makedirs(self.download_path)
-            self.options.add_argument("--headless=new")
+            # self.options.add_argument("--headless=new")
             self.options.add_argument("--window-size=1920,1080")
             self.options.add_argument("--disable-blink-features=AutomationControlled")
             self.options.add_experimental_option("excludeSwitches", ["enable-automation"])

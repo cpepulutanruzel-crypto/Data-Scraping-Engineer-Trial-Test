@@ -20,7 +20,8 @@ Q1 : How to install dependencies ?
 A1 : just type in terminal "pip install requirements.txt"
 
 Q2 : How to run the script ?
-Q2 : just run the "run.py"
+
+A2 : just run the "run.py"
 
 Q3 : Libraries Used & Why:
     ------------------------------------ A3 -----------------------------------

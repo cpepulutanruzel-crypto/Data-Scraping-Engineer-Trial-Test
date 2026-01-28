@@ -8,11 +8,14 @@ Python 3.10+
 FFmpeg: Required by pydub for audio manipulation.
 
 Note: Ensure ffmpeg is placed in _ai_utils/bin or added to your system PATH.
+Link : https://github.com/GyanD/codexffmpeg/releases/download/2026-01-26-git-fe0813d6e2/ffmpeg-2026-01-26-git-fe0813d6e2-full_build.7z
 
 Chrome Browser: The scraper uses webdriver-manager to automatically handle driver compatibility.
 
 Questions and Answers
+
 Q1 : How to install dependencies ?
+
 A1 : just type in terminal "pip install requirements.txt"
 
 Q2 : How to run the script ?
